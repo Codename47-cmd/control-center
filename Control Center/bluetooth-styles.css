@@ -1,0 +1,87 @@
+/* Bluetooth Settings Popup Styles */
+#bluetooth-settings-popup {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: linear-gradient(135deg, rgba(40,40,60,0.98) 80%, rgba(10,132,255,0.08) 100%);
+    border-radius: 24px;
+    box-shadow: 0 16px 48px rgba(10,132,255,0.22), 0 2px 12px rgba(0,0,0,0.18);
+    padding: 36px 0 24px 0;
+    z-index: 9999;
+    color: #fff;
+    text-align: center;
+    min-width: 320px;
+    max-width: 92vw;
+    animation: floatIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.bluetooth-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bluetooth-popup-content > div:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+.bluetooth-settings-list {
+    width: 240px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(10,132,255,0.10);
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.bluetooth-setting-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    min-height: 36px;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+.bluetooth-setting-item:hover {
+    background: rgba(10,132,255,0.08);
+}
+.bluetooth-setting-item i {
+    font-size: 17px;
+}
+.bluetooth-setting-item button {
+    font-size: 13px;
+    color: #fff;
+    background: #0a84ff;
+    border: none;
+    border-radius: 7px;
+    padding: 3px 12px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(10,132,255,0.10);
+    transition: background 0.2s;
+}
+.bluetooth-setting-item button:hover {
+    background: #005ecb;
+}
+.bluetooth-setting-item span {
+    font-size: 13px;
+}
+#close-bluetooth-popup {
+    margin-top: 22px;
+    padding: 10px 32px;
+    border-radius: 12px;
+    border: none;
+    background: #0a84ff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(10,132,255,0.10);
+    font-size: 15px;
+    transition: background 0.2s;
+}
+#close-bluetooth-popup:hover {
+    background: #005ecb;
+}

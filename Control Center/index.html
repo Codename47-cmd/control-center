@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Control Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="control-center">
+            <div class="header">
+                <div class="time">21:30</div>
+                <div class="status-icons">
+                    <i id="status-bluetooth" class="fab fa-bluetooth-b" style="display:none;"></i>
+                    <i id="status-wifi" class="fas fa-wifi" style="display:none;"></i>
+                    <span style="position:relative;display:inline-block;">
+                        <i id="status-cellular" class="fas fa-signal"></i>
+                        <i id="status-airplane" class="fas fa-plane" style="display:none;position:absolute;top:0;left:-18px;"></i>
+                        <span id="status-5g" style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:700;color:#0a84ff;display:none;">5G</span>
+                    </span>
+                    <span id="status-battery" class="battery-status">
+                        <span class="battery-icon">
+                            <span class="battery-body">
+                                <span class="battery-percent">80</span>
+                            </span>
+                            <span class="battery-cap"></span>
+                        </span>
+                        <i class="fas fa-bolt battery-charging" style="display:none;"></i>
+                    </span>
+                    <i id="status-hotspot" class="fas fa-person-rays" style="display:none;"></i>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="large-modules">
+                    <div class="module large" data-module="wifi">
+                        <div class="module-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="module-label">Wi-Fi</div>
+                        <div class="module-status">HomeNetwork</div>
+                    </div>
+                    <div class="module large" data-module="bluetooth">
+                        <div class="module-icon"><i class="fab fa-bluetooth-b"></i></div>
+                        <div class="module-label">Bluetooth</div>
+                        <div class="module-status">AirPods Pro</div>
+                    </div>
+                </div>
+                
+                <div class="module small" data-module="airplane">
+                    <div class="module-icon"><i class="fas fa-plane"></i></div>
+                    <div class="module-label">Airplane</div>
+                </div>
+<div class="module small" data-module="cellular">
+    <div class="module-icon"><i class="fas fa-signal"></i></div>
+    <div class="module-label">Cellular</div>
+</div>
+                <div class="module small" data-module="hotspot">
+                    <div class="module-icon"><i class="fas fa-person-rays"></i></div>
+                    <div class="module-label">Hotspot</div>
+                </div>
+                <div class="module small" data-module="airdrop">
+                    <div class="module-icon"><i class="fas fa-share-nodes"></i></div>
+                    <div class="module-label">AirDrop</div>
+                </div>
+            </div>
+            
+            <!-- Brightness slider -->
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-icon"><i class="fas fa-sun"></i></div>
+                    <input type="range" min="0" max="100" value="70" class="slider" id="brightness-slider">
+                </div>
+                <div class="slider-labels">
+                    <span>Brightness</span>
+                    <span>70%</span>
+                </div>
+            </div>
+            
+            <!-- Volume slider -->
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-icon"><i class="fas fa-volume-up"></i></div>
+                    <input type="range" min="0" max="100" value="80" class="slider" id="volume-slider">
+                </div>
+                <div class="slider-labels">
+                    <span>Volume</span>
+                    <span>80%</span>
+                </div>
+            </div>
+            
+            <div class="music-player">
+                <div class="album-art">
+                    <div class="wave" aria-hidden="true"></div>
+                    <div class="eq" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="music-info">
+                    <div class="song-title">Cosmic Waves</div>
+                    <div class="artist">Neon Pulse</div>
+                </div>
+                <div class="music-controls">
+                    <i class="fas fa-backward"></i>
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-forward"></i>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="home-indicator"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
