@@ -40,10 +40,5 @@ It simulates the quick settings panel found on smartphones, complete with intera
 ## ​ Future Improvements  
 
 - More animations for smoother transitions  
-- Option to customize quick settings  
-
----
-
-## ​ License  
-
-This project is open-source under the **MIT License**.  
+- Option to customize quick settings
+- Optimize for mobile use
